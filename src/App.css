@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+.Main-div {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #9B7e77;
+}
+
+.Buttons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.Buttons button {
+  width: 100px;
+  height: 30px;
+  margin: 5px;
+}
+
+.Changing-div {
+  position: absolute;
+  top: 80px;
+  left: 25px;
+  bottom: 80px;
+  right: 25px;
+}
+
+.Inputs {
+  position: absolute;
+  top: 80px;
+  left: calc(50% - 150px);
+  display: flex;
+  flex-direction: column;
+}
+
+.Inputs input {
+  margin-bottom: 20px;
+  width: 300px;
+  height: 34px;
+}
+
+.Indicator {
+  position: absolute;
+  top: 80px;
+  right: 25px;
+  width: 100px;
+  height: 30px;
+  padding-top: 4px;
+}
+
+
