@@ -64,23 +64,15 @@
   right: 25px;
 }
 
-.Inputs {
-  position: absolute;
-  top: 80px;
-  left: calc(50% - 150px);
-  display: flex;
-  flex-direction: column;
-}
-
-.Inputs input {
-  margin-bottom: 20px;
+input {
+  margin-top: 25px;
   width: 300px;
   height: 34px;
 }
 
 .Indicator {
   position: absolute;
-  top: 80px;
+  top: 25px;
   right: 25px;
   width: 100px;
   height: 30px;

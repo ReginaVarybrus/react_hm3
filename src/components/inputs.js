@@ -1,21 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from '../providers/theme';
 
-const Inputs = () => {
+const Inputs = (props) => {
     const themeCtx = useContext(ThemeContext);
-  
-    // const handleThemeDark = () => {
-    //   themeCtx.changeThemeDark();
-    // };
 
-    // const handleThemeLight = () => {
-    //     themeCtx.changeThemeLight();
-    // };
+    const [value, setValue] = useState(props.text)
+  
+    const onType = (event) => {
+      setValue(event.target.value);
+      props.onChange(event.target.value);
+    }
   
     return (
-      <div className="Inputs">
-        <input style={themeCtx.theme ? { background: "#b09a96" } : { background: "#3d231a" }}/>
-        <input style={themeCtx.theme ? { background: "#b09a96" } : { background: "#3d231a" }}/>
+      <div>
+        <input type='text' placeHolder={props.placeHolder} value={value} onChange={onType} style={themeCtx.theme ? { background: "#b09a96" } : { background: "#3d231a" }}/>
+        {props.isNotValid && <p>* This field is invalid</p>}
       </div>
     );
   };
