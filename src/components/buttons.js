@@ -14,8 +14,8 @@ const Buttons = () => {
   
     return (
       <div className="Buttons">
-        <button onClick={handleThemeDark}>Dark</button>
-        <button onClick={handleThemeLight}>Light</button>
+        <button className="Button-dark" onClick={handleThemeDark}>Dark</button>
+        <button className="Button-light" onClick={handleThemeLight}>Light</button>
       </div>
     );
   };

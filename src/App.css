@@ -41,7 +41,7 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  background: #9B7e77;
+  background: #d6c7bd;
 }
 
 .Buttons {
@@ -54,6 +54,18 @@
   width: 100px;
   height: 30px;
   margin: 5px;
+  border: none;
+  border-radius: 0;
+}
+
+.Button-dark {
+  color: #e3e5e8;
+  background: #2c3137;
+}
+
+.Button-light {
+  color: #2c3137;
+  background: #e3e5e8;
 }
 
 .Changing-div {
@@ -66,8 +78,19 @@
 
 input {
   margin-top: 25px;
+  padding: 0 10px;
   width: 300px;
   height: 34px;
+  border: 0.5px solid #2c3137;
+  outline: none;
+}
+
+.Inputs p {
+  position: absolute;
+  left: calc(50% - 140px);
+  margin: 0;
+  color: red;
+  font-size: 12px;
 }
 
 .Indicator {

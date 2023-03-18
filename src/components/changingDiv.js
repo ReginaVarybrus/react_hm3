@@ -12,8 +12,8 @@ const ChangingDiv = () => {
     }
 
     const handleChangeNotValid = (value) => {
-      if (!parseInt(value)) {
-        value.preventDefault();
+      console.log(value)
+      if (!value) {
         setIsFieldInvalid(true);
       } else {
         setIsFieldInvalid(false);
@@ -22,11 +22,11 @@ const ChangingDiv = () => {
 
     return (
         <div className="Changing-div"
-          style={themeCtx.theme ? { background: "#3d231a" } : { background: "#b09a96" }}>
-            <Inputs text='' value='' placeHolder='put some number' onChange={handleChangeNotValid} isNotValid={isFieldInvalid}/>
-            <Inputs text='' placeHolder='put some text' onChange={handleChange}/>
+          style={themeCtx.theme ? { background: "#2c3137" } : { background: "#e3e5e8" }}>
+            <Inputs name='number' type='text' placeholder='put some number' onChange={handleChangeNotValid} isNotValid={isFieldInvalid}/>
+            <Inputs name='text' type='text' placeholder='put some text' onChange={handleChange}/>
             <div className="Indicator"
-              style={themeCtx.theme ? { background: "#b09a96", color: 'black' } : { background: "#3d231a", color: 'white' }}>
+              style={themeCtx.theme ? { background: "#e3e5e8", color: '#2c3137' } : { background: "#2c3137", color: '#e3e5e8' }}>
                 {themeCtx.theme ? 'Night' : 'Day'}
               </div>
         </div>
